@@ -1,0 +1,131 @@
+h1 {
+	color: green; 
+	text-align: center;
+}
+
+h2 {
+	color: pink;
+	text-align: center;
+}
+
+#heading{
+	background-color: gray; 
+}
+
+.square{
+	background-color: red; 
+	width: 100px;
+	height: 100px;
+}
+
+
+.rect{
+	background-color: purple; 
+	width: 50px;
+	height: 100px;
+}
+
+.tri {
+	width: 0px;
+	height: 0px;
+	border-right: 50px solid transparent; 
+	border-left: 50px solid transparent; 
+	border-top: 50px solid transparent; 
+	border-bottom: 50px solid green; 
+}
+
+.circle {
+	width: 100px;
+	height: 100px; 
+	background-color: blue; 
+	border-radius: 100px; 
+}
+
+#tilted{
+	transform: rotate(30deg);
+	position: relative;
+	animation-name: triPath;
+	animation-duration: 5s;
+	
+}
+
+@keyframes triPath{
+	0% {
+		left:0px;
+		top: 0px;
+	}
+	33%{
+		left: 100px;
+		top: 100px;
+	}
+	66%{
+		left: 0px;
+		top: 100px; 
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+	
+#movingSquare {
+	position: relative;
+	animation-name: move;
+	animation-duration: 2s;
+	animation-iteration-count: 10;
+
+}
+
+@keyframes move {
+	from {
+	left:0px;
+	background-color: green	
+	}
+	to {
+		left: 100px; 
+	}
+}
+#movingTriangle {
+	position: relative;
+	animation-name: triangleMove;
+	animation-duration: 10s;
+	animation-iteration-count:10;
+	animation-direction: alternate; 
+}
+@keyframes triangleMove {
+	0% {
+		left:0px; 
+	}
+	100% {
+		left: 100px; 
+		transform: rotate (360deg);
+	}
+}
+
+#movingCircle{
+	position: relative; 
+	animation: path 2s infinite;
+}
+
+@keyframes path {
+	0% {
+		left: 0px;
+		top: 0px; 
+	}
+	25%{
+		left: 100px;
+		top: 0px; 
+	}
+	50% {
+		left: 100px;
+		top: 100px; 
+	}
+	75% {
+		left: 0px; 
+		top: 100px;
+	}
+	100% {
+		left: 0px; 
+		top: 0px;
+	}
+}
